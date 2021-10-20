@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+
+namespace pokedex_demos_comp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("**POKEDEX***");
+
+            List<TipoHierba> tipoHierbas = new List<TipoHierba>();
+            List<TipoElectrico> tipoElectricos = new List<TipoElectrico>();
+
+            TipoHierba Bulbasaur = new TipoHierba("Bulbasaur",0.5f,5.5f);
+            TipoElectrico Pikachu = new TipoElectrico("Pikachu", 0.7f, 4.5f, 120);
+
+            List<TipoHierba> TiposHierba = new List<TipoHierba>();
+            TiposHierba.Add(Bulbasaur);
+
+            List<TipoElectrico> TiposElectricos = new List<TipoElectrico>();
+            TiposElectricos.Add(Pikachu);
+           
+
+            Console.WriteLine(Bulbasaur.Atacar());
+            Console.WriteLine(Pikachu.Estado());
+        }
+    }
